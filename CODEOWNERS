@@ -1,6 +1,6 @@
-# CODEOWNERS
+EdenCorporations# CODEOWNERS
 
-# EdenCORP Standards Repository — CODEOWNERS
+# EdenCorporations Standards Repository — CODEOWNERS
 #
 # This file defines who is responsible for reviewing changes to each part
 # of this repository. Reviewers are automatically requested when a PR
@@ -14,35 +14,35 @@
 
 # Default owners for all files not explicitly matched below.
 # Leadership and platform team review all changes.
-*                                   @edencorp/leadership @edencorp/platform
+*                                   @EdenCorporations/leadership @EdenCorporations/platform
 
 # Core standards documents require leadership sign-off.
-README.md                           @edencorp/leadership @edencorp/platform
-CODE_OF_CONDUCT.md                  @edencorp/leadership @edencorp/platform
-CONTRIBUTING.md                     @edencorp/leadership @edencorp/platform
-SECURITY.md                         @edencorp/leadership @edencorp/platform
+README.md                           @EdenCorporations/leadership @EdenCorporations/platform
+CODE_OF_CONDUCT.md                  @EdenCorporations/leadership @EdenCorporations/platform
+CONTRIBUTING.md                     @EdenCorporations/leadership @EdenCorporations/platform
+SECURITY.md                         @EdenCorporations/leadership @EdenCorporations/platform
 
 # Architecture and development standards — platform team owns these.
-ARCHITECTURE.md                     @edencorp/platform @edencorp/leadership
-DEVELOPMENT.md                      @edencorp/platform
-INFRASTRUCTURE.md                   @edencorp/platform
-BRANCHING_STRATEGY.md               @edencorp/platform
-COMMIT_CONVENTIONS.md               @edencorp/platform
-VERSIONING.md                       @edencorp/platform
+ARCHITECTURE.md                     @EdenCorporations/platform @EdenCorporations/leadership
+DEVELOPMENT.md                      @EdenCorporations/platform
+INFRASTRUCTURE.md                   @EdenCorporations/platform
+BRANCHING_STRATEGY.md               @EdenCorporations/platform
+COMMIT_CONVENTIONS.md               @EdenCorporations/platform
+VERSIONING.md                       @EdenCorporations/platform
 
 # AI engineering standards — prism team (AI) co-owns with platform.
-AI_ENGINEERING.md                   @edencorp/prism @edencorp/platform @edencorp/leadership
+AI_ENGINEERING.md                   @EdenCorporations/prism @EdenCorporations/platform @EdenCorporations/leadership
 
 # Testing and quality standards.
-TESTING.md                          @edencorp/platform
+TESTING.md                          @EdenCorporations/platform
 
 # Process documents.
-REVIEW_PROCESS.md                   @edencorp/platform @edencorp/leadership
-INCIDENT_RESPONSE.md                @edencorp/platform @edencorp/leadership
-DOCUMENTATION.md                    @edencorp/platform
+REVIEW_PROCESS.md                   @EdenCorporations/platform @EdenCorporations/leadership
+INCIDENT_RESPONSE.md                @EdenCorporations/platform @EdenCorporations/leadership
+DOCUMENTATION.md                    @EdenCorporations/platform
 
 # Templates — platform team maintains these.
-templates/                          @edencorp/platform
+templates/                          @EdenCorporations/platform
 
 # CODEOWNERS itself requires leadership sign-off.
-CODEOWNERS                          @edencorp/leadership @edencorp/platform
+CODEOWNERS                          @EdenCorporations/leadership @EdenCorporations/platform
