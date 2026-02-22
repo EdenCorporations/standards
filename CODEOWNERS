@@ -1,0 +1,48 @@
+# CODEOWNERS
+
+# EdenCORP Standards Repository — CODEOWNERS
+#
+# This file defines who is responsible for reviewing changes to each part
+# of this repository. Reviewers are automatically requested when a PR
+# modifies files matching their pattern.
+#
+# Format: <pattern> <owner> [<owner> ...]
+# Owners can be GitHub teams or individual usernames.
+# The last matching pattern takes precedence.
+#
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for all files not explicitly matched below.
+# Leadership and platform team review all changes.
+*                                   @edencorp/leadership @edencorp/platform
+
+# Core standards documents require leadership sign-off.
+README.md                           @edencorp/leadership @edencorp/platform
+CODE_OF_CONDUCT.md                  @edencorp/leadership @edencorp/platform
+CONTRIBUTING.md                     @edencorp/leadership @edencorp/platform
+SECURITY.md                         @edencorp/leadership @edencorp/platform
+
+# Architecture and development standards — platform team owns these.
+ARCHITECTURE.md                     @edencorp/platform @edencorp/leadership
+DEVELOPMENT.md                      @edencorp/platform
+INFRASTRUCTURE.md                   @edencorp/platform
+BRANCHING_STRATEGY.md               @edencorp/platform
+COMMIT_CONVENTIONS.md               @edencorp/platform
+VERSIONING.md                       @edencorp/platform
+
+# AI engineering standards — prism team (AI) co-owns with platform.
+AI_ENGINEERING.md                   @edencorp/prism @edencorp/platform @edencorp/leadership
+
+# Testing and quality standards.
+TESTING.md                          @edencorp/platform
+
+# Process documents.
+REVIEW_PROCESS.md                   @edencorp/platform @edencorp/leadership
+INCIDENT_RESPONSE.md                @edencorp/platform @edencorp/leadership
+DOCUMENTATION.md                    @edencorp/platform
+
+# Templates — platform team maintains these.
+templates/                          @edencorp/platform
+
+# CODEOWNERS itself requires leadership sign-off.
+CODEOWNERS                          @edencorp/leadership @edencorp/platform
