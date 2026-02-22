@@ -95,4 +95,4 @@ To propose a change to these standards, open a pull request and follow the proce
 
 ## License
 
-Copyright © 2025 EdenCORP. All rights reserved. Internal use only.
+Copyright © 2026 EdenCORP. All rights reserved. Internal use only.
