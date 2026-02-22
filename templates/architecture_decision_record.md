@@ -4,7 +4,7 @@
 **Status:** Draft | Accepted | Rejected | Deprecated | Superseded by ADR-NNN
 **Deciders:** @username, @username
 **Consulted:** @username, @username (optional — people consulted but not decision-makers)
-**Informed:** @edencorp/platform, @edencorp/leadership (optional — people informed of the decision)
+**Informed:** @EdenCorporations/platform, @EdenCorporations/leadership (optional — people informed of the decision)
 
 ---
 

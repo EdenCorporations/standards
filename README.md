@@ -69,8 +69,8 @@ EdenCORP builds AI-native, enterprise-grade systems that are designed to scale. 
 
 - Branch protection rules enforce PR requirements and required status checks.
 - CI pipelines enforce linting, testing, and security scanning automatically.
-- Quarterly standards reviews are conducted by `@edencorp/platform`.
-- Exceptions require written approval from `@edencorp/leadership` and must be documented in an [ADR](templates/architecture_decision_record.md).
+- Quarterly standards reviews are conducted by `@EdenCorporations/platform`.
+- Exceptions require written approval from `@EdenCorporations/leadership` and must be documented in an [ADR](templates/architecture_decision_record.md).
 
 ---
 
@@ -87,7 +87,7 @@ EdenCORP builds AI-native, enterprise-grade systems that are designed to scale. 
 
 ## Ownership
 
-This repository is maintained by `@edencorp/platform` under the authority of `@edencorp/leadership`.
+This repository is maintained by `@EdenCorporations/platform` under the authority of `@EdenCorporations/leadership`.
 
 To propose a change to these standards, open a pull request and follow the process defined in [CONTRIBUTING.md](CONTRIBUTING.md).
 

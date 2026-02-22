@@ -65,10 +65,10 @@ Violations are assessed case by case. Outcomes may include:
 - Permanent removal from EdenCORP projects.
 - Escalation to HR or legal teams where appropriate.
 
-Decisions made by `@edencorp/leadership` are final.
+Decisions made by `@EdenCorporations/leadership` are final.
 
 ---
 
 ## Attribution
 
-This Code of Conduct is maintained by `@edencorp/platform` and reviewed annually.
+This Code of Conduct is maintained by `@EdenCorporations/platform` and reviewed annually.

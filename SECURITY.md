@@ -90,7 +90,7 @@ All web applications and APIs must address the [OWASP Top 10](https://owasp.org/
 - **Principle of least privilege:** Every system, service account, and human account must have only the permissions required for its function.
 - **MFA:** Required for all EdenCORP GitHub organisation members, cloud console access, and production system access.
 - **Service accounts:** Must use short-lived credentials (OIDC tokens preferred over long-lived keys).
-- **Access reviews:** Conducted quarterly by `@edencorp/platform`. Unused access is revoked within 30 days.
+- **Access reviews:** Conducted quarterly by `@EdenCorporations/platform`. Unused access is revoked within 30 days.
 - **Production access:** Requires explicit approval. All production access is logged and auditable.
 
 ---
@@ -105,4 +105,4 @@ A dedicated security review is required before deploying:
 - Any new AI model integration or data pipeline.
 - Any infrastructure change that modifies network security groups, IAM policies, or firewall rules.
 
-Security reviews are conducted by `@edencorp/platform` with escalation to external auditors for P0-class systems.
+Security reviews are conducted by `@EdenCorporations/platform` with escalation to external auditors for P0-class systems.

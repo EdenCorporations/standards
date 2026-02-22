@@ -138,7 +138,7 @@ graph TD
 | Runbooks and operational docs | Internal wiki | EdenCORP engineers |
 | Standards (this repo) | `eden-standards` repository | EdenCORP engineers |
 
-Never publish internal documentation to a public location without explicit approval from `@edencorp/leadership`.
+Never publish internal documentation to a public location without explicit approval from `@EdenCorporations/leadership`.
 
 ---
 
@@ -147,4 +147,4 @@ Never publish internal documentation to a public location without explicit appro
 - Documentation changes are reviewed as part of the normal PR process.
 - Reviewers are expected to check documentation for accuracy, clarity, and completeness — not just code.
 - Outdated documentation that is discovered during a review must be flagged and updated before the PR is merged (or a follow-up ticket created for substantial documentation work).
-- Quarterly documentation audits are conducted by `@edencorp/platform` to identify and remove stale content.
+- Quarterly documentation audits are conducted by `@EdenCorporations/platform` to identify and remove stale content.
