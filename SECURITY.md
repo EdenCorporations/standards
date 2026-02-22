@@ -8,7 +8,7 @@ EdenCORP takes security seriously across all systems, repositories, and data pip
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-Report security vulnerabilities by emailing **security@edencorp.ai** with:
+Report security vulnerabilities by emailing **security@edencorp.org** with:
 
 - A clear description of the vulnerability.
 - Steps to reproduce (proof of concept if available).
