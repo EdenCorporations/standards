@@ -40,7 +40,7 @@ gitGraph
 
 | Branch | Purpose | Who merges to it |
 |---|---|---|
-| `main` | Production-ready code. Always deployable. | `@edencorp/platform` via release or hotfix PR |
+| `main` | Production-ready code. Always deployable. | `@EdenCorporations/platform` via release or hotfix PR |
 | `develop` | Integration branch. Merged features awaiting release. | Engineers via feature PR |
 
 Direct commits to `main` or `develop` are not permitted. All changes go through pull requests.
@@ -75,7 +75,7 @@ The following rules are enforced on `main` via GitHub branch protection:
 - **Require status checks to pass before merging.** All CI checks must be green.
 - **Require branches to be up to date before merging.** PRs must be rebased or merged from `main` before approval.
 - **Require linear history.** Squash merges only (no merge commits on `main`).
-- **Restrict who can push.** Only `@edencorp/platform` can merge to `main`.
+- **Restrict who can push.** Only `@EdenCorporations/platform` can merge to `main`.
 - **Do not allow force pushes.**
 - **Do not allow branch deletions.**
 
@@ -119,7 +119,7 @@ Hotfixes address critical production issues that cannot wait for the next regula
 2. Fix the issue and write a regression test.
 3. Open a PR to `main`. Mark it with the `hotfix` label.
 4. Hotfix PRs require:
-   - At least 1 approval from `@edencorp/platform`.
+   - At least 1 approval from `@EdenCorporations/platform`.
    - All CI checks passing.
 5. Merge to `main`. Tag with the patch version: `v1.2.1`.
 6. Open a PR to merge `main` back into `develop`.
@@ -133,7 +133,7 @@ Hotfixes must **never** introduce new features or unrelated changes.
 - All production releases are tagged on `main` using annotated tags.
 - Tag format: `v<major>.<minor>.<patch>` (e.g., `v2.1.0`).
 - Pre-release tags: `v2.1.0-beta.1`, `v2.1.0-rc.1`.
-- Tags are created by `@edencorp/platform` after a successful production deployment.
+- Tags are created by `@EdenCorporations/platform` after a successful production deployment.
 - Every tag must have a corresponding entry in `CHANGELOG.md`.
 
 ---

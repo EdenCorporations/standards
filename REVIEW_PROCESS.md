@@ -61,10 +61,10 @@ Reviewers must evaluate every PR against the following checklist:
 | Change type | Approvals required |
 |---|---|
 | Standard feature or fix | 1 approval from any engineer on the team |
-| Changes to auth, payments, or PII handling | 1 approval from `@edencorp/platform` |
-| Changes to AI pipeline, prompts, or model config | 1 approval from `@edencorp/platform` + review against [AI_ENGINEERING.md](AI_ENGINEERING.md) |
-| Changes to infrastructure or IaC | 1 approval from `@edencorp/platform` |
-| Changes to these standards documents | 1 approval from `@edencorp/platform` + 1 from `@edencorp/leadership` |
+| Changes to auth, payments, or PII handling | 1 approval from `@EdenCorporations/platform` |
+| Changes to AI pipeline, prompts, or model config | 1 approval from `@EdenCorporations/platform` + review against [AI_ENGINEERING.md](AI_ENGINEERING.md) |
+| Changes to infrastructure or IaC | 1 approval from `@EdenCorporations/platform` |
+| Changes to these standards documents | 1 approval from `@EdenCorporations/platform` + 1 from `@EdenCorporations/leadership` |
 
 Self-approval is never permitted.
 
@@ -100,7 +100,7 @@ If a PR has been blocked by review comments for > 3 business days with no respon
 
 ## Security Review Triggers
 
-A dedicated security review by `@edencorp/platform` is required (in addition to the standard approval) when the PR:
+A dedicated security review by `@EdenCorporations/platform` is required (in addition to the standard approval) when the PR:
 
 - Adds or modifies authentication or authorisation logic.
 - Changes how credentials or tokens are stored, transmitted, or validated.
@@ -137,4 +137,4 @@ A PR may be merged when:
 4. The branch is up to date with the target branch.
 5. The PR title follows the Conventional Commits format.
 
-Merge is performed by the **PR author** after all criteria are satisfied, unless a `@edencorp/platform` team member is performing the merge as part of a release or hotfix process.
+Merge is performed by the **PR author** after all criteria are satisfied, unless a `@EdenCorporations/platform` team member is performing the merge as part of a release or hotfix process.

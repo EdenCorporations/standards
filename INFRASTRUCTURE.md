@@ -185,7 +185,7 @@ Backup restoration must be tested quarterly. Results are documented in the incid
 | Tier 2 (internal tools, non-critical APIs) | 99.5% | 3.6 hours |
 | Tier 3 (dev/staging, background jobs) | 99.0% | 7.3 hours |
 
-Service tier classification is assigned by `@edencorp/leadership` and reviewed annually.
+Service tier classification is assigned by `@EdenCorporations/leadership` and reviewed annually.
 
 ---
 

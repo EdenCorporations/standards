@@ -45,7 +45,7 @@ Version numbers follow the format `MAJOR.MINOR.PATCH`:
 - Tag format: `v<MAJOR>.<MINOR>.<PATCH>` (e.g., `v1.3.0`).
 - Pre-release tags: `v1.3.0-beta.1`, `v1.3.0-rc.1`.
 - Tags are created after a successful production deployment, not before.
-- Tags are created by `@edencorp/platform`.
+- Tags are created by `@EdenCorporations/platform`.
 
 ### Tagging Command (for reference)
 
@@ -134,7 +134,7 @@ Deprecation is the process of marking a feature, API, or behaviour as scheduled 
 3. **Communication.** Deprecation notices are:
    - Added to the API documentation.
    - Communicated to affected teams via Slack and email.
-   - Tracked in a deprecation register maintained by `@edencorp/platform`.
+   - Tracked in a deprecation register maintained by `@EdenCorporations/platform`.
 
 4. **Remove.** After the deprecation period, the feature is removed in a `MAJOR` version bump. The removal is documented as a breaking change in `CHANGELOG.md`.
 

@@ -8,7 +8,7 @@ Thank you for contributing to the EdenCORP engineering standards repository. The
 
 - **All EdenCORP engineers** may propose changes via pull request.
 - **External contributors** are not accepted. This is an internal repository.
-- **Final approval** on all changes rests with `@edencorp/platform` and `@edencorp/leadership`.
+- **Final approval** on all changes rests with `@EdenCorporations/platform` and `@EdenCorporations/leadership`.
 
 ---
 
@@ -58,13 +58,13 @@ Use the [PR template](templates/pull_request_template.md). Your PR must include:
 
 ### 5. Review
 
-- All PRs require at least **one approval** from `@edencorp/platform`.
-- Changes to security, AI, or architecture standards additionally require approval from `@edencorp/leadership`.
+- All PRs require at least **one approval** from `@EdenCorporations/platform`.
+- Changes to security, AI, or architecture standards additionally require approval from `@EdenCorporations/leadership`.
 - Reviews are expected within **3 business days**.
 
 ### 6. Merge
 
-Approved PRs are merged by `@edencorp/platform` using squash merge.
+Approved PRs are merged by `@EdenCorporations/platform` using squash merge.
 
 ---
 
@@ -103,4 +103,4 @@ Use this checklist to assess whether your repository complies with EdenCORP stan
 
 ## Questions
 
-Open an issue or contact `@edencorp/platform` in Slack (`#platform-engineering`).
+Open an issue or contact `@EdenCorporations/platform` in Slack (`#platform-engineering`).

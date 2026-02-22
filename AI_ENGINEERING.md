@@ -236,4 +236,4 @@ EdenCORP is committed to building AI systems that are safe, fair, and transparen
 ### Accountability
 - Every AI feature has a named technical owner.
 - AI incidents (hallucinations, bias events, safety failures) are tracked in the incident management system.
-- Quarterly responsible AI reviews are conducted by `@edencorp/platform` for all production AI features.
+- Quarterly responsible AI reviews are conducted by `@EdenCorporations/platform` for all production AI features.

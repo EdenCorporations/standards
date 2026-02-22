@@ -80,7 +80,7 @@ See the Postmortem section below.
 - All incident communication occurs in the dedicated incident Slack channel.
 - Status updates are posted on a defined cadence (every 30 minutes for P0/P1).
 - The IC pings `@here` in `#incidents` for major status changes.
-- `@edencorp/leadership` is notified immediately for all P0 incidents and within 1 hour for P1 incidents.
+- `@EdenCorporations/leadership` is notified immediately for all P0 incidents and within 1 hour for P1 incidents.
 
 ### External Communication (Customer-Facing)
 
