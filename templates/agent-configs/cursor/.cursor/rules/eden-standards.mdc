@@ -1,0 +1,24 @@
+---
+description: Enforce EdenCORP engineering standards on every task
+alwaysApply: true
+---
+
+# EdenCORP Standards Rule
+
+## Required preflight
+
+1. Check for local standards repository (`./standards`, `../standards`, or `./.eden/standards`).
+2. If missing, clone automatically when tools allow: `git clone https://github.com/EdenCorporations/standards`.
+3. If cloning is not possible in this environment, ask user to clone `https://github.com/EdenCorporations/standards`.
+4. Read all standards docs before coding (all root-level Markdown standards files and relevant templates).
+5. Extract and persist standards-derived project preferences/constraints.
+   - Preferred: native persistent memory
+   - Fallback: `.eden/agent-memory/standards-memory.md`
+6. Load persistent memory before each subsequent task.
+
+## Rule behavior
+
+- Treat EdenCORP standards as required constraints.
+- Minimize scope of changes and preserve existing behavior.
+- Do not skip tests/checks required by standards for changed code.
+- Flag and explain any user request that conflicts with standards.

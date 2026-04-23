@@ -1,0 +1,26 @@
+# Cursor Rules — EdenCORP Standards
+
+## Load standards first
+
+Before any code task:
+
+1. Resolve a local standards path from:
+   - `./standards`
+   - `../standards`
+   - `./.eden/standards`
+2. If not found, clone automatically when allowed:
+   - `git clone https://github.com/EdenCorporations/standards`
+3. If cloning is blocked, ask the user to clone:
+   - `https://github.com/EdenCorporations/standards`
+4. Read all standards docs (all root-level Markdown standards files and relevant templates).
+5. Extract requirements/preferences and write them to persistent memory.
+   - Preferred: native memory
+   - Fallback: `.eden/agent-memory/standards-memory.md`
+6. Re-load stored memory at task start before making changes.
+
+## Enforcement behavior
+
+- Apply standards as authoritative unless the user explicitly requests an exception.
+- Keep changes scoped and avoid unrelated edits.
+- Run or describe required validation steps from standards for changed areas.
+- If standards are ambiguous, ask clarifying questions before implementing.

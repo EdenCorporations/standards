@@ -1,0 +1,34 @@
+# Starter template for Continue.
+# Copy to: .continue/config.yaml in your project repository.
+# Adjust schema fields for your installed Continue version.
+# IMPORTANT: Update the context paths below to the actual local standards path
+# (for example ./standards, ../standards, or ./.eden/standards).
+
+name: EdenCORP Standards Profile
+version: 1
+
+systemMessage: |
+  You must apply EdenCORP engineering standards before starting work.
+  Preflight:
+  1) Check for local standards repository at ./standards, ../standards, or ./.eden/standards.
+  2) If not present, clone standards automatically when environment permissions allow:
+     git clone https://github.com/EdenCorporations/standards
+  3) If cloning is blocked, stop and ask the user to clone and provide the local path.
+  4) Read all standards docs (all root-level Markdown standards files and relevant templates), not only a small subset.
+  5) Extract requirements/preferences and store them in persistent project memory.
+     - Preferred: native persistent memory
+     - Fallback: .eden/agent-memory/standards-memory.md
+  6) Reload stored memory at the start of every future task.
+  7) Keep changes minimal, secure, and standards-compliant.
+
+context:
+  - provider: file
+    path: ../standards/README.md
+  - provider: file
+    path: ../standards/DEVELOPMENT.md
+  - provider: file
+    path: ../standards/TESTING.md
+  - provider: file
+    path: ../standards/SECURITY.md
+  - provider: file
+    path: ../standards/REVIEW_PROCESS.md

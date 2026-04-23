@@ -1,0 +1,25 @@
+# Starter template for Aider.
+# Copy to: .aider.conf.yml in your project repository.
+# Adjust options for your installed Aider version.
+# IMPORTANT: Update the read paths below to the actual local standards path
+# (for example ./standards, ../standards, or ./.eden/standards).
+
+read:
+  - ../standards/README.md
+  - ../standards/DEVELOPMENT.md
+  - ../standards/TESTING.md
+  - ../standards/SECURITY.md
+  - ../standards/REVIEW_PROCESS.md
+
+message: |
+  Before any code changes:
+  1) Verify EdenCORP standards are available locally at ./standards, ../standards, or ./.eden/standards.
+  2) If missing, clone standards automatically if environment permissions allow:
+     git clone https://github.com/EdenCorporations/standards
+  3) If cloning is blocked, ask the user to clone it and provide the path.
+  4) Read all standards documents (all root-level Markdown standards files and relevant templates), not only a subset.
+  5) Extract project constraints/preferences and store them in persistent memory.
+     - Preferred: native persistent memory
+     - Fallback: .eden/agent-memory/standards-memory.md
+  6) Load memory at the beginning of every future task.
+  7) Keep changes minimal and standards-compliant.

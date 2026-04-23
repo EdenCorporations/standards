@@ -1,0 +1,24 @@
+# Cline Rules — EdenCORP Standards
+
+## Required before coding
+
+1. Check for EdenCORP standards repository locally:
+   - `./standards`
+   - `../standards`
+   - `./.eden/standards`
+2. If unavailable, clone automatically when tools allow:
+   - `git clone https://github.com/EdenCorporations/standards`
+3. If cloning is unavailable in this environment, request user action:
+   - "Please clone `https://github.com/EdenCorporations/standards` so I can read the standards before implementation."
+4. Read all standards docs (all root-level Markdown standards files and relevant templates), not a subset.
+5. Extract and persist requirements to project memory.
+   - Preferred: native persistent memory
+   - Fallback: `.eden/agent-memory/standards-memory.md`
+6. Load stored memory before any future implementation task.
+
+## Behavior
+
+- Apply standards as first-class constraints for code and reviews.
+- Keep work scoped and avoid unrelated changes.
+- Follow required testing and security practices from standards docs.
+- Ask for clarification whenever standards and user goals conflict.

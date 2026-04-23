@@ -65,6 +65,43 @@ EdenCORP builds AI-native, enterprise-grade systems that are designed to scale. 
 3. **Assign an owner** from [CODEOWNERS](CODEOWNERS) to each migration issue.
 4. **Target compliance within one sprint** for P1/P2 gaps, one quarter for P3 gaps.
 
+### Importing Standards into Coding Agents
+
+Use the ready-made templates in [`templates/agent-configs/`](templates/agent-configs/) and copy them into your project at the correct config path for your coding agent.
+
+All templates enforce the same startup policy:
+
+1. The agent must load EdenCORP standards before beginning implementation.
+2. If the standards repository is not available locally, the agent should clone it itself when tool permissions allow (`git clone https://github.com/EdenCorporations/standards`).
+3. If the agent cannot clone due to permissions/sandbox limits, it must stop and ask the user to clone it.
+4. The agent must read all standards documents (all root-level standards Markdown files such as `ARCHITECTURE.md`, `DEVELOPMENT.md`, `TESTING.md`, `SECURITY.md`, `REVIEW_PROCESS.md`, and the remaining standards files, plus relevant templates).
+5. The agent must persist extracted project preferences/constraints into long-lived project memory and re-use that memory in later tasks.
+
+#### Agent Config Paths and Templates
+
+| Agent | Config location in your project | Template to copy |
+|---|---|---|
+| Cursor (legacy) | `.cursorrules` | [`templates/agent-configs/cursor/.cursorrules`](templates/agent-configs/cursor/.cursorrules) |
+| Cursor (rules directory) | `.cursor/rules/*.mdc` | [`templates/agent-configs/cursor/.cursor/rules/eden-standards.mdc`](templates/agent-configs/cursor/.cursor/rules/eden-standards.mdc) |
+| GitHub Copilot | `.github/copilot-instructions.md` | [`templates/agent-configs/copilot/.github/copilot-instructions.md`](templates/agent-configs/copilot/.github/copilot-instructions.md) |
+| Windsurf | `.windsurfrules` | [`templates/agent-configs/windsurf/.windsurfrules`](templates/agent-configs/windsurf/.windsurfrules) |
+| Claude Code | `CLAUDE.md` | [`templates/agent-configs/claude/CLAUDE.md`](templates/agent-configs/claude/CLAUDE.md) |
+| Cline | `.clinerules` | [`templates/agent-configs/cline/.clinerules`](templates/agent-configs/cline/.clinerules) |
+| Aider | `.aider.conf.yml` | [`templates/agent-configs/aider/.aider.conf.yml`](templates/agent-configs/aider/.aider.conf.yml) |
+| Continue | `.continue/config.yaml` | [`templates/agent-configs/continue/.continue/config.yaml`](templates/agent-configs/continue/.continue/config.yaml) |
+
+#### Setup Steps
+
+1. Pick your agent from the table above.
+2. Copy the matching template file to the target config location in your project repository.
+3. If needed, update the standards path in the template (for example `../standards`).
+4. Copy [`templates/agent-configs/shared/standards-memory-template.md`](templates/agent-configs/shared/standards-memory-template.md) into your project as a memory file (recommended path: `.eden/agent-memory/standards-memory.md`) before first run.
+5. Commit the config and memory bootstrap files so all contributors and CI agents use the same policy.
+6. On first run:
+   - if agent has clone capability: it should clone standards automatically
+   - otherwise clone manually and rerun:
+     - `git clone https://github.com/EdenCorporations/standards`
+
 ### Enforcement
 
 - Branch protection rules enforce PR requirements and required status checks.
@@ -82,6 +119,8 @@ EdenCORP builds AI-native, enterprise-grade systems that are designed to scale. 
 | [issue_bug.md](templates/issue_bug.md) | Bug reports |
 | [issue_feature.md](templates/issue_feature.md) | Feature requests |
 | [architecture_decision_record.md](templates/architecture_decision_record.md) | Architectural decisions |
+| [agent-configs/](templates/agent-configs/) | Starter templates for coding-agent configuration |
+| [agent-configs/shared/standards-memory-template.md](templates/agent-configs/shared/standards-memory-template.md) | Persistent memory template for standards-derived project preferences |
 
 ---
 
