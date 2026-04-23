@@ -65,6 +65,39 @@ EdenCORP builds AI-native, enterprise-grade systems that are designed to scale. 
 3. **Assign an owner** from [CODEOWNERS](CODEOWNERS) to each migration issue.
 4. **Target compliance within one sprint** for P1/P2 gaps, one quarter for P3 gaps.
 
+### Importing Standards into Coding Agents
+
+To use these standards in any coding agent (Copilot, Cursor, Claude Code, Cline, Continue, Windsurf, and similar tools), apply one of these patterns:
+
+1. **Direct URL import (works in most chat-based agents).**
+   - Add the repo URL as context: `https://github.com/EdenCorporations/standards`
+   - If your agent supports document-level context, also attach the specific files it should enforce (for example `DEVELOPMENT.md`, `TESTING.md`, `SECURITY.md`, `REVIEW_PROCESS.md`).
+
+2. **Repository instruction file (best for repeatable enforcement).**
+   - In your project repository, create the agent instruction file your tool supports.
+   - In that file, state that all generated code and reviews must comply with this standards repository and link to the required documents.
+   - Keep links explicit so the agent can resolve the source of truth:
+     - `https://github.com/EdenCorporations/standards/blob/main/DEVELOPMENT.md`
+     - `https://github.com/EdenCorporations/standards/blob/main/TESTING.md`
+     - `https://github.com/EdenCorporations/standards/blob/main/SECURITY.md`
+     - `https://github.com/EdenCorporations/standards/blob/main/REVIEW_PROCESS.md`
+
+3. **Prompt bootstrap (fallback for agents without persistent instructions).**
+   - Start each new task/session with: "Use EdenCORP engineering standards as the governing policy for this work."
+   - Include direct links to the standards files relevant to the task.
+
+#### Recommended Agent Mapping
+
+| Agent | Where to configure standards |
+|---|---|
+| GitHub Copilot | Repository custom instructions / chat context |
+| Cursor | Project Rules |
+| Claude Code | Project instruction file / session context |
+| Cline / Roo Code | Workspace instruction/rules file |
+| Continue | Assistant config and system message |
+| Windsurf | Workspace rules/instructions |
+| Any other coding agent | System prompt, project instructions, or attached context documents |
+
 ### Enforcement
 
 - Branch protection rules enforce PR requirements and required status checks.
