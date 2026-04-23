@@ -1,0 +1,26 @@
+# Starter template for Continue.
+# Copy to: .continue/config.yaml in your project repository.
+# Adjust schema fields for your installed Continue version.
+
+name: EdenCORP Standards Profile
+version: 1
+
+systemMessage: |
+  You must apply EdenCORP engineering standards before starting work.
+  Preflight:
+  1) Check for local standards repository at ./standards, ../standards, or ./.eden/standards.
+  2) If not present, stop and ask the user to clone https://github.com/EdenCorporations/standards.
+  3) Read README.md, DEVELOPMENT.md, TESTING.md, SECURITY.md, and REVIEW_PROCESS.md from that repo before implementation.
+  4) Keep changes minimal, secure, and standards-compliant.
+
+context:
+  - provider: file
+    path: ../standards/README.md
+  - provider: file
+    path: ../standards/DEVELOPMENT.md
+  - provider: file
+    path: ../standards/TESTING.md
+  - provider: file
+    path: ../standards/SECURITY.md
+  - provider: file
+    path: ../standards/REVIEW_PROCESS.md

@@ -1,0 +1,21 @@
+# Windsurf Rules — EdenCORP Standards
+
+## Startup requirement
+
+Before any implementation:
+
+1. Verify EdenCORP standards repo exists locally (`./standards`, `../standards`, `./.eden/standards`).
+2. If missing, ask user to clone: `https://github.com/EdenCorporations/standards`.
+3. Read and apply:
+   - `README.md`
+   - `DEVELOPMENT.md`
+   - `TESTING.md`
+   - `SECURITY.md`
+   - `REVIEW_PROCESS.md`
+
+## Execution policy
+
+- Standards are mandatory by default.
+- Keep changes minimal and task-focused.
+- Use secure defaults and required validation/testing.
+- Ask clarifying questions when requirements conflict.

@@ -67,36 +67,35 @@ EdenCORP builds AI-native, enterprise-grade systems that are designed to scale. 
 
 ### Importing Standards into Coding Agents
 
-To use these standards in any coding agent (Copilot, Cursor, Claude Code, Cline, Continue, Windsurf, and similar tools), apply one of these patterns:
+Use the ready-made templates in [`templates/agent-configs/`](templates/agent-configs/) and copy them into your project at the correct config path for your coding agent.
 
-1. **Direct URL import (works in most chat-based agents).**
-   - Add the repo URL as context: `https://github.com/EdenCorporations/standards`
-   - If your agent supports document-level context, also attach the specific files it should enforce (for example `DEVELOPMENT.md`, `TESTING.md`, `SECURITY.md`, `REVIEW_PROCESS.md`).
+All templates enforce the same startup policy:
 
-2. **Repository instruction file (best for repeatable enforcement).**
-   - In your project repository, create the agent instruction file your tool supports.
-   - In that file, state that all generated code and reviews must comply with this standards repository and link to the required documents.
-   - Keep links explicit so the agent can resolve the source of truth:
-     - `https://github.com/EdenCorporations/standards/blob/main/DEVELOPMENT.md`
-     - `https://github.com/EdenCorporations/standards/blob/main/TESTING.md`
-     - `https://github.com/EdenCorporations/standards/blob/main/SECURITY.md`
-     - `https://github.com/EdenCorporations/standards/blob/main/REVIEW_PROCESS.md`
+1. The agent must load EdenCORP standards before beginning implementation.
+2. If the standards repository is not available locally, the agent must stop and ask the user to clone `https://github.com/EdenCorporations/standards`.
+3. The agent must read and apply at minimum: `README.md`, `DEVELOPMENT.md`, `TESTING.md`, `SECURITY.md`, and `REVIEW_PROCESS.md`.
 
-3. **Prompt bootstrap (fallback for agents without persistent instructions).**
-   - Start each new task/session with: "Use EdenCORP engineering standards as the governing policy for this work."
-   - Include direct links to the standards files relevant to the task.
+#### Agent Config Paths and Templates
 
-#### Recommended Agent Mapping
+| Agent | Config location in your project | Template to copy |
+|---|---|---|
+| Cursor (legacy) | `.cursorrules` | [`templates/agent-configs/cursor/.cursorrules`](templates/agent-configs/cursor/.cursorrules) |
+| Cursor (rules directory) | `.cursor/rules/*.mdc` | [`templates/agent-configs/cursor/.cursor/rules/eden-standards.mdc`](templates/agent-configs/cursor/.cursor/rules/eden-standards.mdc) |
+| GitHub Copilot | `.github/copilot-instructions.md` | [`templates/agent-configs/copilot/.github/copilot-instructions.md`](templates/agent-configs/copilot/.github/copilot-instructions.md) |
+| Windsurf | `.windsurfrules` | [`templates/agent-configs/windsurf/.windsurfrules`](templates/agent-configs/windsurf/.windsurfrules) |
+| Claude Code | `CLAUDE.md` | [`templates/agent-configs/claude/CLAUDE.md`](templates/agent-configs/claude/CLAUDE.md) |
+| Cline | `.clinerules` | [`templates/agent-configs/cline/.clinerules`](templates/agent-configs/cline/.clinerules) |
+| Aider | `.aider.conf.yml` | [`templates/agent-configs/aider/.aider.conf.yml`](templates/agent-configs/aider/.aider.conf.yml) |
+| Continue | `.continue/config.yaml` | [`templates/agent-configs/continue/.continue/config.yaml`](templates/agent-configs/continue/.continue/config.yaml) |
 
-| Agent | Where to configure standards |
-|---|---|
-| GitHub Copilot | Repository custom instructions / chat context |
-| Cursor | Project Rules |
-| Claude Code | Project instruction file / session context |
-| Cline / Roo Code | Workspace instruction/rules file |
-| Continue | Assistant config and system message |
-| Windsurf | Workspace rules/instructions |
-| Any other coding agent | System prompt, project instructions, or attached context documents |
+#### Setup Steps
+
+1. Pick your agent from the table above.
+2. Copy the matching template file to the target config location in your project repository.
+3. If needed, update the standards path in the template (for example `../standards`).
+4. Commit the config file so all contributors and CI agents use the same policy.
+5. On first run, if the agent reports standards are missing, clone the repo and rerun:
+   - `git clone https://github.com/EdenCorporations/standards`
 
 ### Enforcement
 
@@ -115,6 +114,7 @@ To use these standards in any coding agent (Copilot, Cursor, Claude Code, Cline,
 | [issue_bug.md](templates/issue_bug.md) | Bug reports |
 | [issue_feature.md](templates/issue_feature.md) | Feature requests |
 | [architecture_decision_record.md](templates/architecture_decision_record.md) | Architectural decisions |
+| [agent-configs/](templates/agent-configs/) | Starter templates for coding-agent configuration |
 
 ---
 

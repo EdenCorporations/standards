@@ -1,0 +1,17 @@
+# Starter template for Aider.
+# Copy to: .aider.conf.yml in your project repository.
+# Adjust options for your installed Aider version.
+
+read:
+  - ../standards/README.md
+  - ../standards/DEVELOPMENT.md
+  - ../standards/TESTING.md
+  - ../standards/SECURITY.md
+  - ../standards/REVIEW_PROCESS.md
+
+message: |
+  Before any code changes:
+  1) Verify EdenCORP standards are available locally at ./standards, ../standards, or ./.eden/standards.
+  2) If missing, stop and ask the user to clone https://github.com/EdenCorporations/standards.
+  3) Read standards documents first, then implement.
+  4) Keep changes minimal and standards-compliant.

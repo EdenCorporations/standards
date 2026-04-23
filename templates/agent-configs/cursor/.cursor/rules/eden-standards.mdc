@@ -1,0 +1,24 @@
+---
+description: Enforce EdenCORP engineering standards on every task
+alwaysApply: true
+---
+
+# EdenCORP Standards Rule
+
+## Required preflight
+
+1. Check for local standards repository (`./standards`, `../standards`, or `./.eden/standards`).
+2. If missing, stop and ask user to clone `https://github.com/EdenCorporations/standards`.
+3. Read these files before coding:
+   - `README.md`
+   - `DEVELOPMENT.md`
+   - `TESTING.md`
+   - `SECURITY.md`
+   - `REVIEW_PROCESS.md`
+
+## Rule behavior
+
+- Treat EdenCORP standards as required constraints.
+- Minimize scope of changes and preserve existing behavior.
+- Do not skip tests/checks required by standards for changed code.
+- Flag and explain any user request that conflicts with standards.

@@ -1,0 +1,23 @@
+# Cline Rules — EdenCORP Standards
+
+## Required before coding
+
+1. Check for EdenCORP standards repository locally:
+   - `./standards`
+   - `../standards`
+   - `./.eden/standards`
+2. If unavailable, request user action:
+   - "Please clone `https://github.com/EdenCorporations/standards` so I can read the standards before implementation."
+3. Read at least:
+   - `README.md`
+   - `DEVELOPMENT.md`
+   - `TESTING.md`
+   - `SECURITY.md`
+   - `REVIEW_PROCESS.md`
+
+## Behavior
+
+- Apply standards as first-class constraints for code and reviews.
+- Keep work scoped and avoid unrelated changes.
+- Follow required testing and security practices from standards docs.
+- Ask for clarification whenever standards and user goals conflict.

@@ -1,0 +1,25 @@
+# Cursor Rules — EdenCORP Standards
+
+## Load standards first
+
+Before any code task:
+
+1. Resolve a local standards path from:
+   - `./standards`
+   - `../standards`
+   - `./.eden/standards`
+2. If not found, stop and ask the user to clone:
+   - `https://github.com/EdenCorporations/standards`
+3. Read at minimum:
+   - `README.md`
+   - `DEVELOPMENT.md`
+   - `TESTING.md`
+   - `SECURITY.md`
+   - `REVIEW_PROCESS.md`
+
+## Enforcement behavior
+
+- Apply standards as authoritative unless the user explicitly requests an exception.
+- Keep changes scoped and avoid unrelated edits.
+- Run or describe required validation steps from standards for changed areas.
+- If standards are ambiguous, ask clarifying questions before implementing.
