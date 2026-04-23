@@ -8,14 +8,15 @@ Before any code task:
    - `./standards`
    - `../standards`
    - `./.eden/standards`
-2. If not found, stop and ask the user to clone:
+2. If not found, clone automatically when allowed:
+   - `git clone https://github.com/EdenCorporations/standards`
+3. If cloning is blocked, ask the user to clone:
    - `https://github.com/EdenCorporations/standards`
-3. Read at minimum:
-   - `README.md`
-   - `DEVELOPMENT.md`
-   - `TESTING.md`
-   - `SECURITY.md`
-   - `REVIEW_PROCESS.md`
+4. Read all standards docs (all root-level Markdown standards files and relevant templates), not a small subset.
+5. Extract requirements/preferences and write them to persistent memory.
+   - Preferred: native memory
+   - Fallback: `.eden/agent-memory/standards-memory.md`
+6. Re-load stored memory at task start before making changes.
 
 ## Enforcement behavior
 

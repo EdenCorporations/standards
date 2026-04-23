@@ -72,8 +72,10 @@ Use the ready-made templates in [`templates/agent-configs/`](templates/agent-con
 All templates enforce the same startup policy:
 
 1. The agent must load EdenCORP standards before beginning implementation.
-2. If the standards repository is not available locally, the agent must stop and ask the user to clone `https://github.com/EdenCorporations/standards`.
-3. The agent must read and apply at minimum: `README.md`, `DEVELOPMENT.md`, `TESTING.md`, `SECURITY.md`, and `REVIEW_PROCESS.md`.
+2. If the standards repository is not available locally, the agent should clone it itself when tool permissions allow (`git clone https://github.com/EdenCorporations/standards`).
+3. If the agent cannot clone due to permissions/sandbox limits, it must stop and ask the user to clone it.
+4. The agent must read all standards documents (all Markdown standards docs, not just a subset).
+5. The agent must persist extracted project preferences/constraints into long-lived project memory and re-use that memory in later tasks.
 
 #### Agent Config Paths and Templates
 
@@ -93,9 +95,12 @@ All templates enforce the same startup policy:
 1. Pick your agent from the table above.
 2. Copy the matching template file to the target config location in your project repository.
 3. If needed, update the standards path in the template (for example `../standards`).
-4. Commit the config file so all contributors and CI agents use the same policy.
-5. On first run, if the agent reports standards are missing, clone the repo and rerun:
-   - `git clone https://github.com/EdenCorporations/standards`
+4. Add a project memory file (recommended path: `.eden/agent-memory/standards-memory.md`) using [`templates/agent-configs/shared/standards-memory-template.md`](templates/agent-configs/shared/standards-memory-template.md).
+5. Commit the config and memory bootstrap files so all contributors and CI agents use the same policy.
+6. On first run:
+   - if agent has clone capability: it should clone standards automatically
+   - otherwise clone manually and rerun:
+     - `git clone https://github.com/EdenCorporations/standards`
 
 ### Enforcement
 
@@ -115,6 +120,7 @@ All templates enforce the same startup policy:
 | [issue_feature.md](templates/issue_feature.md) | Feature requests |
 | [architecture_decision_record.md](templates/architecture_decision_record.md) | Architectural decisions |
 | [agent-configs/](templates/agent-configs/) | Starter templates for coding-agent configuration |
+| [agent-configs/shared/standards-memory-template.md](templates/agent-configs/shared/standards-memory-template.md) | Persistent memory template for standards-derived project preferences |
 
 ---
 
