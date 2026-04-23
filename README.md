@@ -74,7 +74,7 @@ All templates enforce the same startup policy:
 1. The agent must load EdenCORP standards before beginning implementation.
 2. If the standards repository is not available locally, the agent should clone it itself when tool permissions allow (`git clone https://github.com/EdenCorporations/standards`).
 3. If the agent cannot clone due to permissions/sandbox limits, it must stop and ask the user to clone it.
-4. The agent must read all standards documents (all Markdown standards docs, not just a subset).
+4. The agent must read all standards documents (all root-level Markdown standards files and relevant templates).
 5. The agent must persist extracted project preferences/constraints into long-lived project memory and re-use that memory in later tasks.
 
 #### Agent Config Paths and Templates

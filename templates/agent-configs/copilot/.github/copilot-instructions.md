@@ -11,7 +11,9 @@ Before performing implementation, refactoring, or review tasks:
 2. If none exists, clone it automatically when tools allow:
    - `git clone https://github.com/EdenCorporations/standards`
 3. If cloning is not possible in this environment, stop and ask the user:
-   - "I need the EdenCORP standards repository to proceed, but I cannot clone it from this environment. Please clone `https://github.com/EdenCorporations/standards` and provide the local path."
+   - "I need the EdenCORP standards repository to proceed, but I cannot clone it from this environment."
+   - Ask user to clone: https://github.com/EdenCorporations/standards
+   - Ask user to provide the local path.
 4. After a valid path exists, read all standards docs before continuing:
    - Read every root-level Markdown standards file in the standards repo.
    - Read templates that affect implementation/review process.

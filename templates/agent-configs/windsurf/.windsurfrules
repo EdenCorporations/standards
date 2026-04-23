@@ -4,7 +4,7 @@
 
 Before any implementation:
 
-1. Verify EdenCORP standards repo exists locally (`./standards`, `../standards`, `./.eden/standards`).
+1. Verify EdenCORP standards repository exists locally (`./standards`, `../standards`, `./.eden/standards`).
 2. If missing, clone automatically when tools allow: `git clone https://github.com/EdenCorporations/standards`.
 3. If cloning is blocked, ask user to clone: `https://github.com/EdenCorporations/standards`.
 4. Read and apply all standards docs (all root-level Markdown standards files and relevant templates).
