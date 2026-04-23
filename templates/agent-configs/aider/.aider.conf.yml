@@ -1,6 +1,8 @@
 # Starter template for Aider.
 # Copy to: .aider.conf.yml in your project repository.
 # Adjust options for your installed Aider version.
+# IMPORTANT: Update the read paths below to the actual local standards path
+# (for example ./standards, ../standards, or ./.eden/standards).
 
 read:
   - ../standards/README.md

@@ -3,7 +3,7 @@
 Use this file when your agent does not provide native persistent memory.
 
 Recommended target path in consumer repositories:
-- `.eden/agent-memory/standards-memory.md`
+`.eden/agent-memory/standards-memory.md`
 
 ## Source
 - Standards repo path:

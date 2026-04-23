@@ -1,6 +1,8 @@
 # Starter template for Continue.
 # Copy to: .continue/config.yaml in your project repository.
 # Adjust schema fields for your installed Continue version.
+# IMPORTANT: Update the context paths below to the actual local standards path
+# (for example ./standards, ../standards, or ./.eden/standards).
 
 name: EdenCORP Standards Profile
 version: 1
